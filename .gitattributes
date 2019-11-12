@@ -2,3 +2,4 @@
 
 *.rtf linguist-vendored=false
 *.txt linguist-vendored=false
+*.md linguist-vendored=false
