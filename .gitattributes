@@ -1,3 +1,4 @@
 * linguist-vendored
 
 *.rtf linguist-vendored=false
+*.txt linguist-vendored=false
