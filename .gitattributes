@@ -1,5 +1,10 @@
-* linguist-vendored
+#* linguist-vendored
 
-*.rtf linguist-vendored=false
-*.txt linguist-vendored=false
-*.md linguist-vendored=false
+#*.rtf linguist-vendored=false
+#*.txt linguist-vendored=false
+#*.md linguist-vendored=false
+
+*.sh linguist-detectable=true
+*.txt linguist-detectable=false
+*.rtf linguist-detectable=false
+*.md linguist-detectable=false
