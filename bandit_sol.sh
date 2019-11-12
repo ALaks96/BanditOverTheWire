@@ -46,6 +46,104 @@ grep "millionth" data.txt
 ## Connect with ssh : ssh  bandit8@bandit.labs.overthewire.org -p 2220
 cat data.txt |sort | uniq -c |grep "1 "
 
+## Bandit9
+## Connect with ssh : ssh  bandit9@bandit.labs.overthewire.org -p 2220
+strings data.txt |grep "==="
+
+## Bandit10
+## Connect with ssh : ssh  bandit10@bandit.labs.overthewire.org -p 2220
+cat data.txt |base64 -d
+
+## Bandit11
+## Connect with ssh : ssh  bandit11@bandit.labs.overthewire.org -p 2220
+alias rot13="tr '[A-Za-z]' '[N-ZA-Mn-za-m]'"
+cat data.txt |rot13
+
+## Bandit12
+## Connect with ssh : ssh  bandit12@bandit.labs.overthewire.org -p 2220
+mkdir /tmp/test001
+cp data.txt /tmp/test001
+cd /tmp/test001
+xxd -r data.txt > data
+file data
+mv data data.gz
+gzip -d data.gz
+ls -al
+file data
+bzip2 -d data
+file data.out
+gzip -d data.gz
+file data
+tar xvf data.gz
+file data5.bin
+tar xvf data5.bin
+file data6.bin
+bzip2 -d data6.bin
+bzip2 -d data6.bin
+file data6.bin.out
+tar xvf data6.bin.out
+file data8.bin
+mv data8.bin data8.gz
+gzip -d data8.gz
+file data8
+cat data8
+
+## Bandit13
+## Connect with ssh @ using private key : ssh bandit14@bandit.labs.overthewire.org -p 2220 -i sshkey.private
+cat /etc/bandit_pass/bandit14
+
+## Bandit14
+## Connect with ssh : ssh bandit14@bandit.labs.overthewire.org -p 2220
+cat /etc/bandit_pass/bandit14|nc localhost 30000
+
+## Bandit15
+## Connect with ssh : ssh bandit15@bandit.labs.overthewire.org -p 2220 
+echo "BfMYro[...]9qh59eK5xNr" |ncat --ssl localhost 30001
+
+## Bandit16
+## Connect with ssh : ssh bandit16@bandit.labs.overthewire.org -p 2220
+nmap -sT localhost -p 31000-32000
+ncat --ssl localhost 31790
+
+## Bandit17
+## Connect with ssh and private key given with password in previous level (saved in a txt file key.txt): ssh bandit17@bandit.labs.overthewire.org -p 2220
+ssh -i key.txt bandit17@bandit.labs.overthewire.org -p 2220
+ls -al
+diff passwords.new passwords.old
+
+## Bandit18
+## Connect with ssh : ssh bandit18@bandit.labs.overthewire.org -p 2220
+ssh bandit18@bandit.labs.overthewire.org -p 2220 'ls -al'
+ssh bandit18@bandit.labs.overthewire.org -p 2220 'cat readme'
+
+## Bandit19
+## Connect with ssh : ssh bandit19@bandit.labs.overthewire.org -p 2220
+file bandit20-do
+./bandit20-do cat /etc/bandit_pass/*
+
+## Bandit20
+## Connect with ssh : ssh bandit20@bandit.labs.overthewire.org -p 2220
+netcat -lp 1234
+./suconnect 1234
+fg 1
+fg 2
+fg 1
+
+## Bandit21
+## Connect with ssh : ssh bandit21@bandit.labs.overthewire.org -p 2220
+ls /etc/cron.d -al
+cat /etc/cron.d/*
+ls -al /usr/bin/cronjob_bandit22.sh
+cat /usr/bin/cronjob_bandit22.sh
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
+## Bandit22
+## Connect with ssh : ssh bandit22@bandit.labs.overthewire.org -p 2220
+ls -al /usr/bin/cronjob_bandit23.sh
+cat /usr/bin/cronjob_bandit23.sh
+echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+
 
 
 
