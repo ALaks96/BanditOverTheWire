@@ -240,6 +240,30 @@ ls -al
 cat packed-refs
 git show f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea
 
+## Bandit31
+## Connect with ssh : ssh bandit31@bandit.labs.overthewire.org -p 2220
+cd /tmp
+mkdir zulu5
+cd zulu5
+git clone ssh://bandit31-git@localhost/home/bandit31-git/repo
+cd repo
+ls -al
+cat README.md
+vim .gitignore
+# Delete *.txt
+vim key.txt
+# Insert text mentionned in README file
+git add key.txt
+git commit
+# Give name to commit
+git push
+
+## Bandit32
+## Connect with ssh : ssh bandit32@bandit.labs.overthewire.org -p 2220
+$0
+ls -al
+cat /etc/bandit_pass/bandit33
+
 
 
 
