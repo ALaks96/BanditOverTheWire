@@ -171,5 +171,82 @@ while read -r line; do echo "$line"|nc localhost 30002 >/tmp/out13.txt ; done < 
 v
 :e /etc/bandit_pass/bandit26
 
+## Bandit26
+## Connect with ssh : ssh bandit26@bandit.labs.overthewire.org -p 2220
+## Reduce terminal size to use 'more' trick
+## type v then enter command
+v
+:set shell=/bin/bash
+:shell
+ls -al
+id
+./bandit27-do
+./bandit27-do id
+./bandit27-do cat /etc/bandit_pass/bandit27
+
+## Bandit27
+## Connect with ssh : ssh bandit27@bandit.labs.overthewire.org -p 2220
+cd /tmp
+mkdir zulu1
+cd zulu1
+git clone ssh://bandit27-git@localhost/home/bandit27-git/repo
+ls -al
+cd repo
+ls -al
+cat README
+
+## Bandit28
+## Connect with ssh : ssh bandit28@bandit.labs.overthewire.org -p 2220
+cd /tmp
+mkdir zulu2
+cd zulu2
+git clone ssh://bandit28-git@localhost/home/bandit28-git/repo
+ls -al
+cd repo
+ls -al
+git log
+git show 073c27c130e6ee407e12faad1dd3848a110c4f95
+
+## Bandit29
+## Connect with ssh : ssh bandit29@bandit.labs.overthewire.org -p 2220
+cd /tmp
+mkdir zulu3
+cd zulu3
+git clone ssh://bandit29-git@localhost/home/bandit29-git/repo
+ls -al
+cat README.md
+git log
+git show 84abedc104bbc0c65cb9eb74eb1d3057753e70f8
+git show 9b19e7d8c1aadf4edcc5b15ba8107329ad6c5650
+git branch
+git branch -a
+git checkout remotes/origin/dev
+ls -al
+cat README.md
+
+## Bandit30
+## Connect with ssh : ssh bandit30@bandit.labs.overthewire.org -p 2220
+cd /tmp
+mkdir zulu4
+cd zulu4
+git clone ssh://bandit30-git@localhost/home/bandit30-git/repo
+ls -al
+cat README.md
+git log
+git show 3aa4c239f729b07deb99a52f125893e162daac9e
+git branches -a
+cd .git
+ls -al
+cat packed-refs
+git show f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea
+
+
+
+
+
+
+
+
+
 
 
