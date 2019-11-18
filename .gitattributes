@@ -8,3 +8,4 @@
 *.txt linguist-detectable=false
 *.rtf linguist-detectable=false
 *.md linguist-detectable=false
+*.py linguist-detectable=false
