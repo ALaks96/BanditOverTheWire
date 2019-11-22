@@ -11,4 +11,14 @@ grep -rnw '/.backup' -e 'leviathan1'
 vim /.backup/bookmarks.html # Go to line 1057
 
 # Leviathan 1 -> 2
+ssh leviathan1@leviathan.labs.overthewire.org -p 2223
+ls -al
+file check
+./check
+ltrace ./check
+./check #Password = sex
+ls -al
+whoami
+cat /etc/leviathan_pass/leviathan2
+
  
