@@ -34,5 +34,15 @@ ltrace ./printfile file
 ln -s /etc/leviathan_pass/leviathan3 /tmp/zulu/file
 ./printfile "file tmp.txt"
 
+# Leviathan 3 -> 4
+ssh leviathan3@leviathan.labs.overthewire.org -p 2223
+ls -al
+file level3
+./level3
+ltrace ./level3 #strcmp() vuln. --> password for level 3 is simply snlprintf lol
+./level3 # give pswd
+whoami
+cat /etc/leviathan_pass/leviathan4 #rofl
+
 
  
