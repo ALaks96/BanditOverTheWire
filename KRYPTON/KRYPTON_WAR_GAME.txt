@@ -2,4 +2,11 @@
 KRYPTONISGREAT
 
 #Password for krypton2:
+ROTTEN
+
+#Password for krypton3:
+CAESARISEASY
+
+#Password for krypton4:
+BRUTE
 
