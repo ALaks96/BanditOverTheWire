@@ -16,5 +16,6 @@ CLEARTEXT
 #Password for krypton6:
 RANDOM
 
-
+#Password for krypton7:
+LSFRISNOTRANDOM
 

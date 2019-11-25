@@ -39,5 +39,22 @@ cat found3
 # same key comes up twice. Trying out gives us the password.
 cat krypton6 # BELOS Z == RANDO M
 
-
+# krypton level 6 -> level 7
+ls -al
+cat HINT1
+cat HINT2
+ls -al onetime/
+./encrypt6
+mkdir /tmp/zulu
+cd /tmp/zulu
+ln -s /krypton/krypton6/keyfile.dat .
+python -c "print "A"*1000" > a
+/krypton/krypton6/encrypt6 a b
+cat a
+python -c "print 'A'*30 + 'B'*30 + 'C'*30" > aa
+/krypton/krypton6/encrypt6 aa bb
+cat bb && echo ""
+cat > a.py << EOF
+python a.py
+ 
 
