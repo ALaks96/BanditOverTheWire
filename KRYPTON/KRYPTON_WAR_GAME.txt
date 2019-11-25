@@ -10,3 +10,11 @@ CAESARISEASY
 #Password for krypton4:
 BRUTE
 
+#Password for krypton5:
+CLEARTEXT
+
+#Password for krypton6:
+RANDOM
+
+
+
