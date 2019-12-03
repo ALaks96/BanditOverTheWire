@@ -10,6 +10,7 @@ vaequeezee
 # Password for Narnia 4
 thaenohtai
 
-
+# Password for Narnia 5
+faimahchiy
 
 
