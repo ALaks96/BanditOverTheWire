@@ -16,6 +16,7 @@ faimahchiy
 # Password for Narnia 6
 neezocaeng
 
-
+# Password for Narnia 7
+ahkiaziphu
 
 

