@@ -13,3 +13,5 @@ Hacking sessions, CTF, websecurity, etc.
 ## KRYPTON
   SSH connection to configured servers. Decypher password files to progress through Krypton levels. 
   
+## NARNIA
+  SSH connection to configured servers. Find vuln in C source code files, find exploit to deliver payload at correct memory adress
